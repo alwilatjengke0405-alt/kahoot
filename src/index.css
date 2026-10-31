@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0f031f;
+    color: #f8fafc;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Sleek Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.8);
+}
+
+/* Ambient Deep Stage Lighting */
+.ambient-kahoot-bg {
+  background-color: #0d011c;
+  background-image: 
+    radial-gradient(circle at 20% 12%, rgba(147, 51, 234, 0.28) 0%, transparent 42%),
+    radial-gradient(circle at 80% 18%, rgba(59, 130, 246, 0.22) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.16) 0%, transparent 48%),
+    linear-gradient(180deg, #120324 0%, #080112 100%);
+  background-attachment: fixed;
+}
+
+/* Subtle Grid Texture */
+.ambient-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* Tactile Physical Kahoot 3D Buttons */
+.kahoot-card-btn {
+  position: relative;
+  transition: transform 0.1s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.1s cubic-bezier(0.2, 0, 0, 1), filter 0.15s ease;
+}
+
+.kahoot-card-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.kahoot-card-btn:active:not(:disabled) {
+  transform: translateY(3px) !important;
+}
+
+/* Red Option (Triangle) */
+.btn-kahoot-red {
+  background-color: #e21b3c;
+  border-bottom: 5px solid #990a21;
+  box-shadow: 0 4px 14px rgba(226, 27, 60, 0.35);
+}
+.btn-kahoot-red:hover:not(:disabled) {
+  background-color: #f12547;
+  box-shadow: 0 6px 20px rgba(226, 27, 60, 0.45);
+}
+.btn-kahoot-red:active:not(:disabled) {
+  border-bottom-width: 2px;
+  box-shadow: 0 2px 6px rgba(226, 27, 60, 0.25);
+}
+
+/* Blue Option (Diamond) */
+.btn-kahoot-blue {
+  background-color: #1368ce;
+  border-bottom: 5px solid #0a4185;
+  box-shadow: 0 4px 14px rgba(19, 104, 206, 0.35);
+}
+.btn-kahoot-blue:hover:not(:disabled) {
+  background-color: #1b7cf4;
+  box-shadow: 0 6px 20px rgba(19, 104, 206, 0.45);
+}
+.btn-kahoot-blue:active:not(:disabled) {
+  border-bottom-width: 2px;
+  box-shadow: 0 2px 6px rgba(19, 104, 206, 0.25);
+}
+
+/* Yellow Option (Circle) */
+.btn-kahoot-yellow {
+  background-color: #d89e00;
+  border-bottom: 5px solid #996e00;
+  box-shadow: 0 4px 14px rgba(216, 158, 0, 0.35);
+}
+.btn-kahoot-yellow:hover:not(:disabled) {
+  background-color: #ebb007;
+  box-shadow: 0 6px 20px rgba(216, 158, 0, 0.45);
+}
+.btn-kahoot-yellow:active:not(:disabled) {
+  border-bottom-width: 2px;
+  box-shadow: 0 2px 6px rgba(216, 158, 0, 0.25);
+}
+
+/* Green Option (Square) */
+.btn-kahoot-green {
+  background-color: #26890c;
+  border-bottom: 5px solid #165306;
+  box-shadow: 0 4px 14px rgba(38, 137, 12, 0.35);
+}
+.btn-kahoot-green:hover:not(:disabled) {
+  background-color: #2ea50e;
+  box-shadow: 0 6px 20px rgba(38, 137, 12, 0.45);
+}
+.btn-kahoot-green:active:not(:disabled) {
+  border-bottom-width: 2px;
+  box-shadow: 0 2px 6px rgba(38, 137, 12, 0.25);
+}
+
+/* Pulse animation for urgency */
+@keyframes urgentPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+.animate-urgent-pulse {
+  animation: urgentPulse 1.2s infinite;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

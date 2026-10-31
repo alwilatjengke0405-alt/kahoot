@@ -1,0 +1,7 @@
+{
+  "name": "KahootEnglish 3D - Quiz Interaktif Bahasa Inggris",
+  "description": "Aplikasi kuis bahasa Inggris interaktif berformat kompetitif mirip Kahoot dilengkapi elemen visual 3D Three.js, modul recount text, writing, listening ber-audio, dan speaking, analisis kesalahan mendalam, serta integrasi Google Sheets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
